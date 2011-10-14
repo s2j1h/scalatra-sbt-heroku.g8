@@ -12,9 +12,12 @@ In a shell, run the following:
 
     g8 scalatra/scalatra-sbt-heroku
     cd <name-of-app>
-    sbt
-    > update
-    > jetty-run
+    git init
+    git add .
+    git commit -m "First commit"
+    heroku create MyApp --stack cedar
+    git push heroku master
+    heroku open
     
 You should be able to browse to a [test resource](http://localhost:8080/)
 
